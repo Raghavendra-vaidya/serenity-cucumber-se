@@ -7,7 +7,7 @@ import org.rv.projectutils.ConfReader;
 public class LoginPage extends PageObject {
     String usernameField = "//input[@name='username']";
     String passwordField = "//input[@name='password']";
-    String loginButton = "//button[contains(text(),'Login')]";
+    String loginButton = "//button";
 
 
     String baseUrl = new ConfReader().getBaseUrl();

@@ -1,3 +1,4 @@
+@Login
 Feature: Login
 
   Scenario: Verify login page is loaded and fields are displayed

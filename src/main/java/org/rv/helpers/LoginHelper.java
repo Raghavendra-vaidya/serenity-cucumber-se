@@ -35,7 +35,7 @@ public class LoginHelper {
                     ()-> assertThat(loginPage.getLoginButton().isDisplayed()).isTrue());
         }
         catch (Exception e){
-            Fail.fail(e.getMessage());
+            Fail.fail(e);
         }
     }
 
