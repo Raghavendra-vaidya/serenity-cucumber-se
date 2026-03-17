@@ -1,4 +1,4 @@
-# Serenity Cucumber Selenium Demo 🚀
+# Web Automation with Serenity BDD 🚀
 
 [![Java](https://img.shields.io/badge/Java-21-orange)](https://openjdk.java.net/)
 [![Maven](https://img.shields.io/badge/Maven-3.6+-blue)](https://maven.apache.org/)
@@ -6,7 +6,7 @@
 [![Cucumber](https://img.shields.io/badge/Cucumber-7.33.0-brightgreen)](https://cucumber.io/)
 [![JUnit](https://img.shields.io/badge/JUnit-5.14.3-red)](https://junit.org/junit5/)
 
-A demonstration project showcasing web test automation using Serenity BDD, Cucumber, and Selenium WebDriver. This project automates login functionality testing for the OrangeHRM demo application.
+This project demonstrates web automation testing using Serenity BDD, Cucumber, and Selenium WebDriver.
 
 ## ✨ Features
 
@@ -70,13 +70,13 @@ src/
 
 Key settings:
 - **Browser**: Chrome (default)
-- **Base URL**: OrangeHRM demo site
+- **Base URL**: Application demo site
 - **Screenshots**: Full page screenshots enabled
 - **Browser Restart**: Restarts browser for each scenario
 
 ### Test Data
 
-The tests are configured to run against the OrangeHRM demo application at:
+The tests are configured to run against the demo application at:
 `https://opensource-demo.orangehrmlive.com/web/index.php/auth/login`
 
 ## 🧪 Running Tests
@@ -149,9 +149,3 @@ mvn clean verify -Dserenity.logging=VERBOSE
 
 
 ---
-
-
-
-
-
-
