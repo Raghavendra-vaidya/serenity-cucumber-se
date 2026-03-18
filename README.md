@@ -69,6 +69,7 @@ src/
 ### Serenity Configuration (`src/test/resources/serenity.conf`)
 
 Key settings:
+
 - **Browser**: Chrome (default)
 - **Base URL**: Application demo site
 - **Screenshots**: Full page screenshots enabled
@@ -82,21 +83,25 @@ The tests are configured to run against the demo application at:
 ## 🧪 Running Tests
 
 ### Run All Tests
+
 ```bash
 mvn clean verify
 ```
 
 ### Run Specific Feature
+
 ```bash
 mvn clean verify -Dcucumber.filter.tags="@Login"
 ```
 
 ### Run with Custom Tags
+
 ```bash
 mvn clean verify -Dtags="@smoke"
 ```
 
 ### Generate Reports Only
+
 ```bash
 mvn serenity:aggregate
 ```
@@ -115,6 +120,7 @@ The project includes comprehensive login testing scenarios:
 Serenity generates detailed HTML reports in the `target/site/serenity/` directory after test execution.
 
 ### Report Contents
+
 - **Test Results**: Pass/fail status for each scenario
 - **Step Details**: Detailed execution steps with timestamps
 - **Screenshots**: Automatic screenshots on failures and key steps
@@ -122,8 +128,13 @@ Serenity generates detailed HTML reports in the `target/site/serenity/` director
 - **Environment Details**: Browser, OS, and test configuration
 
 ### Viewing Reports
+
 1. Run the tests: `mvn clean verify`
 2. Open `target/site/serenity/index.html` in a web browser
+
+Example:
+
+![img.png](img.png)
 
 ## 📚 Dependencies
 
@@ -136,16 +147,18 @@ Serenity generates detailed HTML reports in the `target/site/serenity/` director
 ## 🌐 Browser Configuration
 
 The project is configured to use Chrome with the following options:
+
 - Browser maximized
 - Infobars disabled
 - Popup blocking disabled
 - Automation indicators hidden
 
 ### Debug Mode
+
 Run tests with verbose output:
+
 ```bash
 mvn clean verify -Dserenity.logging=VERBOSE
 ```
-
 
 ---

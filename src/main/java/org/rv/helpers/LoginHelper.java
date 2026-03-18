@@ -73,6 +73,14 @@ public class LoginHelper {
 
     }
 
+    @Step("Enter username and password and click on login")
+    public void enterUsernameAndPassword(String username, String password){
+        loginPage.enterUserName(username);
+        loginPage.enterPassword(password);
+        loginPage.clickOnLoginButton();
+
+    }
+
     @Step("Enter invalid username and password and  click on login")
     public void enterInvalidCredsAndClickOnLogin(){
         loginPage.enterUserName("abc");

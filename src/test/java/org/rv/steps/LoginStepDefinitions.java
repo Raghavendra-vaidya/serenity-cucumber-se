@@ -41,6 +41,15 @@ public class LoginStepDefinitions {
         loginHelper.verifyInvalidCredentialsMessage();
     }
 
+    @And("Enter username as {string} and password as {string} and click on login")
+    public void enterUsernameAndPasswordAndClickOnLogin(String username, String password) {
+        loginHelper.enterUsernameAndPassword(username,password);
+    }
+    @Then("Verify error message for incorrect username or password")
+    public void verifyErrorMessageForIncorrectCreds() {
+        loginHelper.verifyInvalidCredentialsMessage();
+    }
+
     @Then("Enter invalid username and password and Verify error message")
     public void enterInvalidCredsAndVerifyErrorMessage() {
         loginHelper.enterInvalidCredsAndClickOnLogin();
