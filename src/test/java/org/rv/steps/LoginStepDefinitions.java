@@ -6,7 +6,6 @@ import io.cucumber.java.en.Then;
 import net.serenitybdd.annotations.Steps;
 import org.rv.helpers.DashboardHelper;
 import org.rv.helpers.LoginHelper;
-import org.rv.pom.DashboardPage;
 
 public class LoginStepDefinitions {
 
@@ -30,11 +29,13 @@ public class LoginStepDefinitions {
     public void clickOnLoginAndVerifyErrorMessage() {
         loginHelper.verifyFieldValidationMessage();
     }
+
     @Then("Enter invalid password and Verify error message")
     public void enterInvalidPasswordAndVerifyErrorMessage() {
         loginHelper.enterInvalidPasswordAndClickOnLogin();
         loginHelper.verifyInvalidCredentialsMessage();
     }
+
     @Then("Enter invalid username and Verify error message")
     public void enterInvalidUsernameAndVerifyErrorMessage() {
         loginHelper.enterInvalidUsernameAndClickOnLogin();
@@ -43,8 +44,9 @@ public class LoginStepDefinitions {
 
     @And("Enter username as {string} and password as {string} and click on login")
     public void enterUsernameAndPasswordAndClickOnLogin(String username, String password) {
-        loginHelper.enterUsernameAndPassword(username,password);
+        loginHelper.enterUsernameAndPassword(username, password);
     }
+
     @Then("Verify error message for incorrect username or password")
     public void verifyErrorMessageForIncorrectCreds() {
         loginHelper.verifyInvalidCredentialsMessage();
@@ -55,9 +57,9 @@ public class LoginStepDefinitions {
         loginHelper.enterInvalidCredsAndClickOnLogin();
         loginHelper.verifyInvalidCredentialsMessage();
     }
+
     @And("Enter valid credentials and click on login")
     public void enterValidCredentialsAndClickOnLogin() {
         loginHelper.enterValidCredsAndClickOnLogin();
     }
-
 }
