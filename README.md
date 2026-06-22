@@ -84,14 +84,28 @@ The tests are configured to run against the demo application at:
 
 ### Run All Tests
 
+#### Default (Chrome)
+
 ```bash
 mvn clean verify
+```
+
+#### Chrome
+
+```bash
+mvn clean verify -Denvironment=chrome
+```
+
+#### Firefox
+
+```bash
+mvn clean verify -Denvironment=firefox
 ```
 
 ### Run Specific Feature
 
 ```bash
-mvn clean verify -Dcucumber.filter.tags="@Login"
+mvn clean verify "-Dcucumber.filter.tags=@Login"
 ```
 
 ### Run with Custom Tags
